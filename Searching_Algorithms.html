@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching Algorithms - Sandeep Raj Saravanan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f3f7fa;
+        }
+
+        .container {
+            padding: 2.5rem;
+            max-width: 850px;
+            margin: 3rem auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background: linear-gradient(135deg, #5089c6, #6b73ff);
+            color: #fff;
+            padding: 1.8rem;
+            text-align: center;
+            border-radius: 12px 12px 0 0;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .content {
+            padding: 1.8rem;
+        }
+
+        .content h2 {
+            color: #5089c6;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .content p, .content ul {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            color: #666;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 0.6rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            text-align: center;
+            margin-top: 1.5rem;
+            padding: 0.6rem 1.2rem;
+            color: #fff;
+            background: #6b73ff;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-link:hover {
+            background: #507fc5;
+        }
+
+        .sidebar {
+            margin-top: 2rem;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .sidebar h3 {
+            color: #5089c6;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .sidebar ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar a {
+            color: #5089c6;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: #6b73ff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Searching Algorithms</h1>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2>What are Searching Algorithms?</h2>
+            <p>Searching algorithms are essential methods in computer science for locating specific elements or values within a data structure, such as an array, list, or database. These algorithms improve the efficiency of data retrieval processes, enabling faster and more effective access to information.</p>
+
+            <h2>Importance of Searching Algorithms</h2>
+            <p>Searching algorithms are crucial because they:</p>
+            <ul>
+                <li>Provide efficient ways to retrieve information from large datasets.</li>
+                <li>Enable effective data management and organization.</li>
+                <li>Enhance performance in various applications such as databases, search engines, and data processing.</li>
+            </ul>
+
+            <h2>Types of Searching Algorithms</h2>
+            <p>Several searching algorithms cater to different needs. Below are common types:</p>
+            <ul>
+                <li><strong>Linear Search:</strong> A simple algorithm that searches each element in a list one by one. Ideal for unsorted or small lists. 
+                    <br><strong>Time Complexity:</strong> O(n)</li>
+
+                <li><strong>Binary Search:</strong> Works on sorted lists by dividing the search interval in half to find the target value. It significantly reduces the number of comparisons.
+                    <br><strong>Time Complexity:</strong> O(log n)</li>
+
+                <li><strong>Jump Search:</strong> Operates on sorted lists by jumping ahead by fixed steps, then performs a linear search within a smaller interval. Useful for large datasets.
+                    <br><strong>Time Complexity:</strong> O(√n)</li>
+
+                <li><strong>Interpolation Search:</strong> An enhancement over binary search, estimating the position of the search target within a sorted list. Best used when values are uniformly distributed.
+                    <br><strong>Time Complexity:</strong> O(log log n) for uniformly distributed data.</li>
+
+                <li><strong>Exponential Search:</strong> Combines binary search with an exponential range discovery, locating the bounds within which binary search can be performed. Suitable for searching in infinite or bounded datasets.
+                    <br><strong>Time Complexity:</strong> O(log n)</li>
+            </ul>
+
+            <h2>Applications of Searching Algorithms</h2>
+            <p>Searching algorithms are applied across multiple domains:</p>
+            <ul>
+                <li><strong>Database Indexing:</strong> Used to quickly retrieve records and manage indexes.</li>
+                <li><strong>Text Searching:</strong> Integral to text processing applications, enabling rapid search of words, phrases, or patterns.</li>
+                <li><strong>Web Search Engines:</strong> Power search engines to locate web pages that match user queries efficiently.</li>
+                <li><strong>Data Science:</strong> Aid in sorting and analyzing data to uncover insights and relationships within large datasets.</li>
+            </ul>
+
+            <h2>Comparison of Searching Algorithms</h2>
+            <p>The table below summarizes the main characteristics of popular searching algorithms:</p>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Algorithm</th>
+                        <th>Best Use Case</th>
+                        <th>Time Complexity</th>
+                        <th>Space Complexity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Linear Search</td>
+                        <td>Unsorted or small datasets</td>
+                        <td>O(n)</td>
+                        <td>O(1)</td>
+                    </tr>
+                    <tr>
+                        <td>Binary Search</td>
+                        <td>Sorted datasets</td>
+                        <td>O(log n)</td>
+                        <td>O(1)</td>
+                    </tr>
+                    <tr>
+                        <td>Jump Search</td>
+                        <td>Large sorted datasets</td>
+                        <td>O(√n)</td>
+                        <td>O(1)</td>
+                    </tr>
+                    <tr>
+                        <td>Interpolation Search</td>
+                        <td>Uniformly distributed datasets</td>
+                        <td>O(log log n)</td>
+                        <td>O(1)</td>
+                    </tr>
+                    <tr>
+                        <td>Exponential Search</td>
+                        <td>Bounded or infinite sorted datasets</td>
+                        <td>O(log n)</td>
+                        <td>O(log n)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sidebar">
+            <h3>Explore Other DSA Topics</h3>
+            <ul>
+                <li><a href="arrays.html">Arrays</a></li>
+                <li><a href="linked_lists.html">Linked Lists</a></li>
+                <li><a href="stacks.html">Stacks</a></li>
+                <li><a href="queues.html">Queues</a></li>
+                <li><a href="trees.html">Trees</a></li>
+                <li><a href="graphs.html">Graphs</a></li>
+                <li><a href="hashing.html">Hashing</a></li>
+                <li><a href="dynamic_programming.html">Dynamic Programming</a></li>
+                <li><a href="sorting.html">Sorting Algorithms</a></li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-link">Back to Home</a>
+    </div>
+
+</body>
+</html>

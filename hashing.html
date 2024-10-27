@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashing - Sandeep Raj Saravanan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f3f7fa;
+        }
+
+        .container {
+            padding: 2.5rem;
+            max-width: 850px;
+            margin: 3rem auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background: linear-gradient(135deg, #5089c6, #6b73ff);
+            color: #fff;
+            padding: 1.8rem;
+            text-align: center;
+            border-radius: 12px 12px 0 0;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .content {
+            padding: 1.8rem;
+        }
+
+        .content h2 {
+            color: #5089c6;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .content p, .content ul {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            color: #666;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 0.6rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            text-align: center;
+            margin-top: 1.5rem;
+            padding: 0.6rem 1.2rem;
+            color: #fff;
+            background: #6b73ff;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-link:hover {
+            background: #507fc5;
+        }
+
+        .sidebar {
+            margin-top: 2rem;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .sidebar h3 {
+            color: #5089c6;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .sidebar ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar a {
+            color: #5089c6;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: #6b73ff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Hashing</h1>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2>What is Hashing?</h2>
+            <p>Hashing is a technique used to convert an input (or 'key') into a fixed-size string of bytes. The output, typically a hash code, is used for efficient data retrieval, ensuring that each key maps to a unique value in a hash table.</p>
+
+            <h2>Why Use Hashing?</h2>
+            <p>Hashing provides various advantages in programming:</p>
+            <ul>
+                <li>Enables fast data retrieval and storage, making it ideal for implementing associative arrays.</li>
+                <li>Helps in data integrity verification through checksums.</li>
+                <li>Facilitates quick access to elements by using their hash codes.</li>
+            </ul>
+
+            <h2>Hash Functions</h2>
+            <p>A hash function takes an input and produces a hash code. Good hash functions have the following properties:</p>
+            <ul>
+                <li><strong>Deterministic:</strong> The same input always produces the same output.</li>
+                <li><strong>Fast computation:</strong> It should be quick to compute the hash value.</li>
+                <li><strong>Uniform distribution:</strong> The hash values should be uniformly distributed to minimize collisions.</li>
+                <li><strong>Collision-resistant:</strong> It should be hard to find two different inputs that produce the same hash output.</li>
+            </ul>
+
+            <h2>Basic Operations</h2>
+            <p>The essential operations in hashing include:</p>
+            <ul>
+                <li><strong>Insertion:</strong> Add a new key-value pair to the hash table.</li>
+                <li><strong>Deletion:</strong> Remove a key-value pair from the hash table.</li>
+                <li><strong>Search:</strong> Retrieve a value based on its key.</li>
+                <li><strong>Collision Resolution:</strong> Handle scenarios where multiple keys map to the same hash value (e.g., through chaining or open addressing).</li>
+            </ul>
+
+            <h2>Applications of Hashing</h2>
+            <p>Hashing is used in various applications, including:</p>
+            <ul>
+                <li>Implementing hash tables for fast data retrieval.</li>
+                <li>Storing passwords securely using hashing algorithms.</li>
+                <li>Creating checksums for data integrity verification.</li>
+                <li>Indexing data in databases for quick access.</li>
+            </ul>
+        </div>
+
+        <div class="sidebar">
+            <h3>Explore Other DSA Topics</h3>
+            <ul>
+                <li><a href="arrays.html">Arrays</a></li>
+                <li><a href="linked_lists.html">Linked Lists</a></li>
+                <li><a href="stacks.html">Stacks</a></li>
+                <li><a href="queues.html">Queues</a></li>
+                <li><a href="trees.html">Trees</a></li>
+                <li><a href="graphs.html">Graphs</a></li>
+                <li><a href="dynamic_programming.html">Dynamic Programming</a></li>
+                <li><a href="sorting.html">Sorting Algorithms</a></li>
+                <li><a href="searching.html">Searching Algorithms</a></li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-link">Back to Home</a>
+    </div>
+
+</body>
+</html>
