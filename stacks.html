@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacks - Sandeep Raj Saravanan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f3f7fa;
+        }
+
+        .container {
+            padding: 2.5rem;
+            max-width: 850px;
+            margin: 3rem auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background: linear-gradient(135deg, #5089c6, #6b73ff);
+            color: #fff;
+            padding: 1.8rem;
+            text-align: center;
+            border-radius: 12px 12px 0 0;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .content {
+            padding: 1.8rem;
+        }
+
+        .content h2 {
+            color: #5089c6;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .content p, .content ul {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            color: #666;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 0.6rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            text-align: center;
+            margin-top: 1.5rem;
+            padding: 0.6rem 1.2rem;
+            color: #fff;
+            background: #6b73ff;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-link:hover {
+            background: #507fc5;
+        }
+
+        .sidebar {
+            margin-top: 2rem;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .sidebar h3 {
+            color: #5089c6;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .sidebar ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar a {
+            color: #5089c6;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: #6b73ff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Stacks</h1>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2>What are Stacks?</h2>
+            <p>Stacks are linear data structures that follow the Last In First Out (LIFO) principle, meaning the last element added to the stack is the first one to be removed. Stacks are used for storing a collection of elements where access is restricted to one end only.</p>
+
+            <h2>Why Use Stacks?</h2>
+            <p>Stacks provide various advantages in programming:</p>
+            <ul>
+                <li>Simple data structure that allows easy management of elements.</li>
+                <li>Used for function call management in programming languages (call stack).</li>
+                <li>Helpful in algorithms that require backtracking, like depth-first search.</li>
+            </ul>
+
+            <h2>Basic Operations</h2>
+            <p>The essential operations on stacks include:</p>
+            <ul>
+                <li><strong>Push:</strong> Add an element to the top of the stack.</li>
+                <li><strong>Pop:</strong> Remove the top element from the stack.</li>
+                <li><strong>Peek:</strong> Retrieve the top element without removing it.</li>
+                <li><strong>IsEmpty:</strong> Check whether the stack is empty.</li>
+                <li><strong>Size:</strong> Get the number of elements in the stack.</li>
+            </ul>
+
+            <h2>Applications of Stacks</h2>
+            <p>Stacks are used in various applications, including:</p>
+            <ul>
+                <li>Undo mechanisms in software applications.</li>
+                <li>Parsing expressions in compilers.</li>
+                <li>Managing memory in recursive algorithms.</li>
+                <li>Backtracking algorithms for maze and puzzle solving.</li>
+            </ul>
+        </div>
+
+        <div class="sidebar">
+            <h3>Explore Other DSA Topics</h3>
+            <ul>
+                <li><a href="arrays.html">Arrays</a></li>
+                <li><a href="linked_lists.html">Linked Lists</a></li>
+                <li><a href="queues.html">Queues</a></li>
+                <li><a href="trees.html">Trees</a></li>
+                <li><a href="graphs.html">Graphs</a></li>
+                <li><a href="hashing.html">Hashing</a></li>
+                <li><a href="Dynamic_Programming.html">Dynamic Programming</a></li>
+                <li><a href="Sorting_Algorithms.html">Sorting Algorithms</a></li>
+                <li><a href="Searching_Algorithms.html">Searching Algorithms</a></li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-link">Back to Home</a>
+    </div>
+
+</body>
+</html>

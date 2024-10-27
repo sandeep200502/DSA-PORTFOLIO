@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays - Sandeep Raj Saravanan</title>
+    <style>
+        /* Font and color setup */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f3f7fa;
+        }
+
+        /* Container styling */
+        .container {
+            padding: 2.5rem;
+            max-width: 850px;
+            margin: 3rem auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header styling */
+        header {
+            background: linear-gradient(135deg, #5089c6, #6b73ff);
+            color: #fff;
+            padding: 1.8rem;
+            text-align: center;
+            border-radius: 12px 12px 0 0;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        /* Content section styling */
+        .content {
+            padding: 1.8rem;
+        }
+
+        .content h2 {
+            color: #5089c6;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .content p, .content ul {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            color: #666;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 0.6rem;
+        }
+
+        /* Back link styling */
+        .back-link {
+            display: inline-block;
+            text-align: center;
+            margin-top: 1.5rem;
+            padding: 0.6rem 1.2rem;
+            color: #fff;
+            background: #6b73ff;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-link:hover {
+            background: #507fc5;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            margin-top: 2rem;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .sidebar h3 {
+            color: #5089c6;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .sidebar ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar a {
+            color: #5089c6;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: #6b73ff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Arrays</h1>
+    </header>
+
+    <!-- Main content container -->
+    <div class="container">
+        <div class="content">
+            <h2>What are Arrays?</h2>
+            <p>Arrays are collections of elements identified by index or key, stored in contiguous memory spaces. Arrays provide a straightforward way to store and manipulate data by position, making access fast and efficient.</p>
+
+            <h2>Why Use Arrays?</h2>
+            <p>Arrays are among the most fundamental data structures, used to store data in an ordered and fixed-size collection. They allow:</p>
+            <ul>
+                <li>Fast access to elements by index</li>
+                <li>Memory efficiency as elements are stored contiguously</li>
+                <li>Compatibility with other data structures and algorithms for various applications</li>
+            </ul>
+
+            <h2>Types of Arrays</h2>
+            <p>Arrays can vary by dimension and data type:</p>
+            <ul>
+                <li><strong>One-dimensional array:</strong> A single row of elements (e.g., `[1, 2, 3]`).</li>
+                <li><strong>Two-dimensional array:</strong> An array with rows and columns, often represented as a matrix.</li>
+                <li><strong>Multi-dimensional array:</strong> Arrays with more than two dimensions, useful for more complex data.</li>
+            </ul>
+
+            <h2>Basic Operations</h2>
+            <p>Some of the essential operations on arrays include:</p>
+            <ul>
+                <li><strong>Access:</strong> Access elements using the index (e.g., `array[2]`).</li>
+                <li><strong>Insertion:</strong> Adding elements at the end (if space allows) or at a specific position (shifting other elements).</li>
+                <li><strong>Deletion:</strong> Removing elements by index and adjusting subsequent elements.</li>
+                <li><strong>Traversal:</strong> Looping through each element for processing.</li>
+                <li><strong>Sorting:</strong> Arranging elements in a specific order (e.g., ascending or descending).</li>
+                <li><strong>Searching:</strong> Finding the index of a specific value within the array.</li>
+            </ul>
+
+            <h2>Applications of Arrays</h2>
+            <p>Arrays are widely used in programming for tasks such as:</p>
+            <ul>
+                <li>Implementing other data structures, like stacks and queues</li>
+                <li>Storing and sorting large data sets</li>
+                <li>Using in algorithms that require quick access to elements</li>
+                <li>Graphics and image processing, where pixels are often represented as 2D arrays</li>
+            </ul>
+        </div>
+
+        <!-- Sidebar with links to other DSA topics -->
+        <div class="sidebar">
+            <h3>Explore other topics</h3>
+            <ul>
+                <li><a href="llist.html">Linked Lists</a></li>
+                <li><a href="stacks.html">Stacks</a></li>
+                <li><a href="queues.html">Queues</a></li>
+                <li><a href="trees.html">Trees</a></li>
+                <li><a href="graphs.html">Graphs</a></li>
+                <li><a href="hashing.html">Hashing</a></li>
+                <li><a href="Dynamic_Programming.html">Dynamic Programming</a></li>
+                <li><a href="Sorting_Algorithms.html">Sorting Algorithms</a></li>
+                <li><a href="Searching_Algorithms.html">Searching Algorithms</a></li>
+            </ul>
+        </div>
+
+        <!-- Back link -->
+        <a href="index.html" class="back-link">Back to Home</a>
+    </div>
+
+</body>
+</html>

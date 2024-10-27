@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithms - Sandeep Raj Saravanan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f3f7fa;
+        }
+
+        .container {
+            padding: 2.5rem;
+            max-width: 850px;
+            margin: 3rem auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background: linear-gradient(135deg, #5089c6, #6b73ff);
+            color: #fff;
+            padding: 1.8rem;
+            text-align: center;
+            border-radius: 12px 12px 0 0;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .content {
+            padding: 1.8rem;
+        }
+
+        .content h2 {
+            color: #5089c6;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .content p, .content ul {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            color: #666;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 0.6rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            text-align: center;
+            margin-top: 1.5rem;
+            padding: 0.6rem 1.2rem;
+            color: #fff;
+            background: #6b73ff;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-link:hover {
+            background: #507fc5;
+        }
+
+        .sidebar {
+            margin-top: 2rem;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .sidebar h3 {
+            color: #5089c6;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .sidebar ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar a {
+            color: #5089c6;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: #6b73ff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sorting Algorithms</h1>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2>What are Sorting Algorithms?</h2>
+            <p>Sorting algorithms are methods for arranging the elements of a list or array in a specified order, typically in ascending or descending order. They play a crucial role in optimizing the performance of other algorithms.</p>
+
+            <h2>Why Use Sorting Algorithms?</h2>
+            <p>Sorting provides several benefits in programming:</p>
+            <ul>
+                <li>Enhances the efficiency of searching algorithms.</li>
+                <li>Improves data organization and retrieval.</li>
+                <li>Facilitates data analysis and visualization.</li>
+            </ul>
+
+            <h2>Types of Sorting Algorithms</h2>
+            <p>Common sorting algorithms include:</p>
+            <ul>
+                <li><strong>Bubble Sort:</strong> A simple comparison-based algorithm that repeatedly steps through the list, comparing adjacent elements and swapping them if they are in the wrong order.</li>
+                <li><strong>Selection Sort:</strong> Divides the input list into a sorted and an unsorted region, repeatedly selecting the smallest (or largest) element from the unsorted region and moving it to the sorted region.</li>
+                <li><strong>Insertion Sort:</strong> Builds a sorted array one element at a time by repeatedly taking an element from the unsorted portion and inserting it into the correct position in the sorted portion.</li>
+                <li><strong>Merge Sort:</strong> A divide-and-conquer algorithm that divides the list into halves, recursively sorts them, and merges the sorted halves back together.</li>
+                <li><strong>Quick Sort:</strong> Also a divide-and-conquer algorithm, it picks a pivot element and partitions the array into elements less than and greater than the pivot, recursively sorting the partitions.</li>
+                <li><strong>Heap Sort:</strong> Converts the input list into a binary heap data structure and repeatedly extracts the maximum element to produce a sorted array.</li>
+            </ul>
+
+            <h2>Applications of Sorting Algorithms</h2>
+            <p>Sorting algorithms are used in various applications, including:</p>
+            <ul>
+                <li>Data organization in databases.</li>
+                <li>Efficient searching in algorithms like binary search.</li>
+                <li>Data analysis and visualization in statistics.</li>
+                <li>Implementing various algorithms that rely on sorted data.</li>
+            </ul>
+        </div>
+
+        <div class="sidebar">
+            <h3>Explore Other DSA Topics</h3>
+            <ul>
+                <li><a href="arrays.html">Arrays</a></li>
+                <li><a href="linked_lists.html">Linked Lists</a></li>
+                <li><a href="stacks.html">Stacks</a></li>
+                <li><a href="queues.html">Queues</a></li>
+                <li><a href="trees.html">Trees</a></li>
+                <li><a href="graphs.html">Graphs</a></li>
+                <li><a href="hashing.html">Hashing</a></li>
+                <li><a href="Dynamic_Programming.html">Dynamic Programming</a></li>
+                <li><a href="Searching_Algorithms.html">Searching Algorithms</a></li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-link">Back to Home</a>
+    </div>
+
+</body>
+</html>
