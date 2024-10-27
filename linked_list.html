@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked Lists - Sandeep Raj Saravanan</title>
+    <style>
+        /* Font and color setup */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f3f7fa;
+        }
+
+        /* Container styling */
+        .container {
+            padding: 2.5rem;
+            max-width: 850px;
+            margin: 3rem auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header styling */
+        header {
+            background: linear-gradient(135deg, #5089c6, #6b73ff);
+            color: #fff;
+            padding: 1.8rem;
+            text-align: center;
+            border-radius: 12px 12px 0 0;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        /* Content section styling */
+        .content {
+            padding: 1.8rem;
+        }
+
+        .content h2 {
+            color: #5089c6;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .content p, .content ul {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            color: #666;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 0.6rem;
+        }
+
+        /* Back link styling */
+        .back-link {
+            display: inline-block;
+            text-align: center;
+            margin-top: 1.5rem;
+            padding: 0.6rem 1.2rem;
+            color: #fff;
+            background: #6b73ff;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-link:hover {
+            background: #507fc5;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            margin-top: 2rem;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .sidebar h3 {
+            color: #5089c6;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .sidebar ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar a {
+            color: #5089c6;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: #6b73ff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Linked Lists</h1>
+    </header>
+
+    <!-- Main content container -->
+    <div class="container">
+        <div class="content">
+            <h2>What are Linked Lists?</h2>
+            <p>Linked lists are data structures consisting of a sequence of nodes where each node contains a data element and a reference (or link) to the next node in the sequence. Unlike arrays, linked lists do not require contiguous memory, making it easier to insert or delete elements without rearranging other elements.</p>
+
+            <h2>Why Use Linked Lists?</h2>
+            <p>Linked lists are dynamic data structures that provide several advantages:</p>
+            <ul>
+                <li>Dynamic size allows for efficient memory usage.</li>
+                <li>Easy insertion and deletion of elements without resizing.</li>
+                <li>Efficient in implementing other data structures like stacks and queues.</li>
+            </ul>
+
+            <h2>Types of Linked Lists</h2>
+            <p>Linked lists can vary by the number of links in each node:</p>
+            <ul>
+                <li><strong>Singly Linked List:</strong> Each node has a reference to the next node, allowing traversal in one direction.</li>
+                <li><strong>Doubly Linked List:</strong> Each node has references to both the next and previous nodes, allowing traversal in both directions.</li>
+                <li><strong>Circular Linked List:</strong> The last node points back to the first node, creating a circular structure.</li>
+            </ul>
+
+            <h2>Basic Operations</h2>
+            <p>Essential operations on linked lists include:</p>
+            <ul>
+                <li><strong>Insertion:</strong> Adding a new node at the beginning, end, or a specific position.</li>
+                <li><strong>Deletion:</strong> Removing a node from a specific position.</li>
+                <li><strong>Traversal:</strong> Accessing each node to process or display its data.</li>
+                <li><strong>Searching:</strong> Finding a node with a specific value.</li>
+                <li><strong>Reversing:</strong> Changing the direction of the list to reverse the order of nodes.</li>
+            </ul>
+
+            <h2>Applications of Linked Lists</h2>
+            <p>Linked lists are widely used in various applications, including:</p>
+            <ul>
+                <li>Implementing data structures like stacks, queues, and hash tables.</li>
+                <li>Dynamic memory allocation where the size of the data structure can change during execution.</li>
+                <li>Building more complex data structures like adjacency lists for graphs.</li>
+            </ul>
+        </div>
+
+        <!-- Sidebar with links to other DSA topics -->
+        <div class="sidebar">
+            <h3>Explore Other DSA Topics</h3>
+            <ul>
+                <li><a href="arrays.html">Arrays</a></li>
+                <li><a href="stacks.html">Stacks</a></li>
+                <li><a href="queues.html">Queues</a></li>
+                <li><a href="trees.html">Trees</a></li>
+                <li><a href="graphs.html">Graphs</a></li>
+                <li><a href="hashing.html">Hashing</a></li>
+                <li><a href="dynamic_programming.html">Dynamic Programming</a></li>
+                <li><a href="sorting.html">Sorting Algorithms</a></li>
+                <li><a href="searching.html">Searching Algorithms</a></li>
+            </ul>
+        </div>
+
+        <!-- Back link -->
+        <a href="index.html" class="back-link">Back to Home</a>
+    </div>
+
+</body>
+</html>
